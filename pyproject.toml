@@ -85,6 +85,10 @@ changelog = "https://github.com/daq-tools/sqlalchemy-postgresql-relaxed/blob/mai
 documentation = "https://github.com/daq-tools/sqlalchemy-postgresql-relaxed"
 homepage = "https://github.com/daq-tools/sqlalchemy-postgresql-relaxed"
 repository = "https://github.com/daq-tools/sqlalchemy-postgresql-relaxed"
+[project.entry-points."sqlalchemy.dialects"]
+"postgresql.asyncpg_relaxed" = "sqlalchemy_postgresql_relaxed.asyncpg:dialect"
+"postgresql.psycopg_relaxed" = "sqlalchemy_postgresql_relaxed.psycopg:dialect"
+"postgresql.psycopg_relaxed_async" = "sqlalchemy_postgresql_relaxed.psycopg:dialect_async"
 
 [tool.setuptools.packages]
 find = {}
