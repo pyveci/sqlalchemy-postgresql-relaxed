@@ -178,7 +178,7 @@ lint = [
   { cmd = "black --check ." },
   { cmd = "isort --check ." },
   { cmd = "validate-pyproject pyproject.toml" },
-  { cmd = "proselint *.rst doc/**.rst" },
+  { cmd = "proselint *.rst doc/*.rst" },
   # { cmd = "mypy" },
 ]
 
