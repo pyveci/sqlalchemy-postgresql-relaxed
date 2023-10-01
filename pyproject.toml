@@ -64,7 +64,7 @@ dependencies = [
 develop = [
   "black<24",
   "isort<6",
-  "poethepoet<0.19",
+  "poethepoet<0.25",
   "proselint==0.13",
   "pyproject-fmt<1.2",
   "ruff==0.0.291",
