@@ -82,10 +82,10 @@ test = [
   "pytest-cov<5",
 ]
 [project.urls]
-changelog = "https://github.com/daq-tools/sqlalchemy-postgresql-relaxed/blob/main/CHANGES.rst"
-documentation = "https://github.com/daq-tools/sqlalchemy-postgresql-relaxed"
-homepage = "https://github.com/daq-tools/sqlalchemy-postgresql-relaxed"
-repository = "https://github.com/daq-tools/sqlalchemy-postgresql-relaxed"
+changelog = "https://github.com/pyveci/sqlalchemy-postgresql-relaxed/blob/main/CHANGES.rst"
+documentation = "https://github.com/pyveci/sqlalchemy-postgresql-relaxed"
+homepage = "https://github.com/pyveci/sqlalchemy-postgresql-relaxed"
+repository = "https://github.com/pyveci/sqlalchemy-postgresql-relaxed"
 [project.entry-points."sqlalchemy.dialects"]
 "postgresql.asyncpg_relaxed" = "sqlalchemy_postgresql_relaxed.asyncpg:dialect"
 "postgresql.psycopg_relaxed" = "sqlalchemy_postgresql_relaxed.psycopg:dialect"
