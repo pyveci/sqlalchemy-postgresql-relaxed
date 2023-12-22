@@ -6,7 +6,7 @@
 
 [project]
 name = "sqlalchemy-postgresql-relaxed"
-version = "0.1.0"
+version = "0.1.1"
 description = "Relaxed PostgreSQL dialects for SQLAlchemy"
 readme = "README.rst"
 keywords = [
