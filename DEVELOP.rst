@@ -25,7 +25,7 @@ test suite, is::
 
 For installing the package inside a development sandbox (virtualenv), run::
 
-    git clone https://github.com/daq-tools/sqlalchemy-postgresql-relaxed
+    git clone https://github.com/pyveci/sqlalchemy-postgresql-relaxed
     cd sqlalchemy-postgresql-relaxed
     python3 -m venv .venv
     source .venv/bin/activate

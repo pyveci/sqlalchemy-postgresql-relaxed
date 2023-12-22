@@ -1,8 +1,8 @@
-.. image:: https://github.com/daq-tools/sqlalchemy-postgresql-relaxed/workflows/Tests/badge.svg
-    :target: https://github.com/daq-tools/sqlalchemy-postgresql-relaxed/actions?workflow=Tests
+.. image:: https://github.com/pyveci/sqlalchemy-postgresql-relaxed/workflows/Tests/badge.svg
+    :target: https://github.com/pyveci/sqlalchemy-postgresql-relaxed/actions?workflow=Tests
 
-.. image:: https://codecov.io/gh/daq-tools/sqlalchemy-postgresql-relaxed/branch/main/graph/badge.svg
-    :target: https://codecov.io/gh/daq-tools/sqlalchemy-postgresql-relaxed
+.. image:: https://codecov.io/gh/pyveci/sqlalchemy-postgresql-relaxed/branch/main/graph/badge.svg
+    :target: https://codecov.io/gh/pyveci/sqlalchemy-postgresql-relaxed
     :alt: Test suite code coverage
 
 .. image:: https://pepy.tech/badge/sqlalchemy-postgresql-relaxed/month
@@ -18,7 +18,7 @@
     :target: https://pypi.org/project/sqlalchemy-postgresql-relaxed/
 
 .. image:: https://img.shields.io/pypi/l/sqlalchemy-postgresql-relaxed.svg
-    :target: https://github.com/daq-tools/sqlalchemy-postgresql-relaxed/blob/main/LICENSE
+    :target: https://github.com/pyveci/sqlalchemy-postgresql-relaxed/blob/main/LICENSE
 
 |
 
@@ -84,7 +84,7 @@ Setup
 
 To install the latest development version from the repository, invoke::
 
-    pip install --upgrade git+https://github.com/daq-tools/sqlalchemy-postgresql-relaxed
+    pip install --upgrade git+https://github.com/pyveci/sqlalchemy-postgresql-relaxed
 
 
 *******************
@@ -108,8 +108,8 @@ you should be ready to start hacking.
 Resources
 =========
 
-- `Source code repository <https://github.com/daq-tools/sqlalchemy-postgresql-relaxed>`_
-- `Documentation <https://github.com/daq-tools/sqlalchemy-postgresql-relaxed/blob/main/README.rst>`_
+- `Source code repository <https://github.com/pyveci/sqlalchemy-postgresql-relaxed>`_
+- `Documentation <https://github.com/pyveci/sqlalchemy-postgresql-relaxed/blob/main/README.rst>`_
 - `Python Package Index (PyPI) <https://pypi.org/project/sqlalchemy-postgresql-relaxed/>`_
 
 License and warranty
@@ -118,6 +118,6 @@ License and warranty
 The project is licensed under the terms of the MIT license, see `LICENSE`_.
 
 
-.. _Create an issue: https://github.com/daq-tools/sqlalchemy-postgresql-relaxed/issues/new
-.. _development sandbox: https://github.com/daq-tools/sqlalchemy-postgresql-relaxed/blob/main/DEVELOP.rst
-.. _LICENSE: https://github.com/daq-tools/sqlalchemy-postgresql-relaxed/blob/main/LICENSE
+.. _Create an issue: https://github.com/pyveci/sqlalchemy-postgresql-relaxed/issues/new
+.. _development sandbox: https://github.com/pyveci/sqlalchemy-postgresql-relaxed/blob/main/DEVELOP.rst
+.. _LICENSE: https://github.com/pyveci/sqlalchemy-postgresql-relaxed/blob/main/LICENSE
