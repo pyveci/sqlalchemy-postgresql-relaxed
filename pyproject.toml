@@ -184,7 +184,7 @@ lint = [
 ]
 
 release = [
-  { cmd = "minibump bump --relax minor" },
+  # { cmd = "minibump bump --relax minor" },
   { cmd = "python -m build" },
   { cmd = "twine upload --skip-existing --verbose dist/*.tar.gz dist/*.whl" },
 ]
