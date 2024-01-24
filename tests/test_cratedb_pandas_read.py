@@ -1,3 +1,5 @@
+import sys
+
 import pandas as pd
 import pytest
 import sqlalchemy as sa
@@ -8,7 +10,8 @@ REFERENCE_FRAME = pd.DataFrame.from_records([{"mountain": "Mont Blanc", "height"
 SQL_SELECT_STATEMENT = "SELECT mountain, height FROM sys.summits ORDER BY height DESC LIMIT 1;"
 
 
-pytest.skip("Does not work on Python 3.7", allow_module_level=True)
+if sys.version_info < (3, 8):
+    pytest.skip("Does not work on Python 3.7", allow_module_level=True)
 
 
 def test_crate_read_sql(cratedb_http_host, cratedb_http_port):
