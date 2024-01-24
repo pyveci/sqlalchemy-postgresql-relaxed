@@ -77,6 +77,8 @@ release = [
   "twine<5",
 ]
 test = [
+  "crate[sqlalchemy]",
+  "pandas<2.1",
   "pytest<8",
   "pytest-asyncio<1",
   "pytest-cov<5",
@@ -122,7 +124,7 @@ show_missing = true
 
 [tool.ruff]
 line-length = 120
-
+extend-ignore = ["PD901"]
 select = [
   # Bandit
   "S",
