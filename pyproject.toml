@@ -63,7 +63,7 @@ dependencies = [
 ]
 [project.optional-dependencies]
 develop = [
-  "black<24",
+  "black<25",
   "isort<6",
   "poethepoet<0.25",
   "proselint==0.13",
