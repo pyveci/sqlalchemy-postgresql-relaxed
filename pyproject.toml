@@ -79,7 +79,7 @@ release = [
 test = [
   "crate[sqlalchemy]",
   "pandas<2.3",
-  "pytest<8",
+  "pytest<9",
   "pytest-asyncio<1",
   "pytest-cov<5",
 ]
