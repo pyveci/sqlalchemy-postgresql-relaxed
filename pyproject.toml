@@ -66,9 +66,9 @@ develop = [
   "black<25",
   "isort<6",
   "poethepoet<0.27",
-  "proselint==0.13",
+  "proselint<0.15",
   "pyproject-fmt<2.2",
-  "ruff==0.3.5",
+  "ruff<0.5",
   "validate-pyproject<0.19",
 ]
 release = [
