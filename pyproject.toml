@@ -77,12 +77,12 @@ release = [
   "twine<6",
 ]
 test = [
-  "crate[sqlalchemy]",
   "pandas<2.3",
   "polars[pyarrow]<0.21",
   "pytest<9",
   "pytest-asyncio<1",
   "pytest-cov<6",
+  "sqlalchemy-cratedb",
 ]
 [project.urls]
 changelog = "https://github.com/pyveci/sqlalchemy-postgresql-relaxed/blob/main/CHANGES.rst"
