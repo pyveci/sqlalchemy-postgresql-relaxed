@@ -67,7 +67,7 @@ develop = [
   "isort<6",
   "poethepoet<0.28",
   "proselint<0.15",
-  "pyproject-fmt<2.2",
+  "pyproject-fmt<2.3",
   "ruff<0.6",
   "validate-pyproject<0.19",
 ]
