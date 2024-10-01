@@ -14,9 +14,9 @@ keywords = [
   "postgresql",
   "sqlalchemy",
 ]
-license = {text = "MIT"}
+license = { text = "MIT" }
 authors = [
-  {name = "Andreas Motl", email = "andreas.motl@panodata.org"},
+  { name = "Andreas Motl", email = "andreas.motl@panodata.org" },
 ]
 requires-python = ">=3.7"
 classifiers = [
@@ -36,6 +36,7 @@ classifiers = [
   "Operating System :: POSIX :: Linux",
   "Operating System :: Unix",
   "Programming Language :: Python",
+  "Programming Language :: Python :: 3 :: Only",
   "Programming Language :: Python :: 3.7",
   "Programming Language :: Python :: 3.8",
   "Programming Language :: Python :: 3.9",
@@ -61,8 +62,7 @@ dependencies = [
   "psycopg[binary]",
   "sqlalchemy<3,>=2",
 ]
-[project.optional-dependencies]
-develop = [
+optional-dependencies.develop = [
   "black<25",
   "isort<6",
   "poethepoet<0.30",
@@ -71,12 +71,12 @@ develop = [
   "ruff<0.7",
   "validate-pyproject<0.21",
 ]
-release = [
+optional-dependencies.release = [
   "build<2",
-  'minibump<1; python_version >= "3.10"',
+  "minibump<1; python_version>='3.10'",
   "twine<6",
 ]
-test = [
+optional-dependencies.test = [
   "pandas<2.3",
   "polars[pyarrow]<1.2",
   "pytest<9",
@@ -84,21 +84,52 @@ test = [
   "pytest-cov<6",
   "sqlalchemy-cratedb",
 ]
-[project.urls]
-changelog = "https://github.com/pyveci/sqlalchemy-postgresql-relaxed/blob/main/CHANGES.rst"
-documentation = "https://github.com/pyveci/sqlalchemy-postgresql-relaxed"
-homepage = "https://github.com/pyveci/sqlalchemy-postgresql-relaxed"
-repository = "https://github.com/pyveci/sqlalchemy-postgresql-relaxed"
-[project.entry-points."sqlalchemy.dialects"]
-"postgresql.asyncpg_relaxed" = "sqlalchemy_postgresql_relaxed.asyncpg:dialect"
-"postgresql.psycopg_relaxed" = "sqlalchemy_postgresql_relaxed.psycopg:dialect"
-"postgresql.psycopg_relaxed_async" = "sqlalchemy_postgresql_relaxed.psycopg:dialect_async"
+urls.changelog = "https://github.com/pyveci/sqlalchemy-postgresql-relaxed/blob/main/CHANGES.rst"
+urls.documentation = "https://github.com/pyveci/sqlalchemy-postgresql-relaxed"
+urls.homepage = "https://github.com/pyveci/sqlalchemy-postgresql-relaxed"
+urls.repository = "https://github.com/pyveci/sqlalchemy-postgresql-relaxed"
+entry-points."sqlalchemy.dialects"."postgresql.asyncpg_relaxed" = "sqlalchemy_postgresql_relaxed.asyncpg:dialect"
+entry-points."sqlalchemy.dialects"."postgresql.psycopg_relaxed" = "sqlalchemy_postgresql_relaxed.psycopg:dialect"
+entry-points."sqlalchemy.dialects"."postgresql.psycopg_relaxed_async" = "sqlalchemy_postgresql_relaxed.psycopg:dialect_async"
 
 [tool.setuptools.packages]
 find = {}
 
 [tool.black]
 line-length = 120
+
+[tool.ruff]
+line-length = 120
+lint.select = [
+  # Builtins
+  "A",
+  # Bugbear
+  "B",
+  # comprehensions
+  "C4",
+  # Pycodestyle
+  "E",
+  # eradicate
+  "ERA",
+  # Pyflakes
+  "F",
+  # isort
+  "I",
+  # pandas-vet
+  "PD",
+  # return
+  "RET",
+  # Bandit
+  "S",
+  # print
+  "T20",
+  "W",
+  # flake8-2020
+  "YTT",
+]
+
+lint.extend-ignore = [ "PD901" ]
+lint.per-file-ignores."tests/*" = [ "S101" ] # Use of `assert` detected
 
 [tool.isort]
 profile = "black"
@@ -109,54 +140,19 @@ multi_line_output = 3
 minversion = "2.0"
 addopts = "-rsfEX -p pytester --strict-markers --verbosity=3 --cov --cov-report=term-missing --cov-report=xml"
 log_level = "DEBUG"
-testpaths = ["testing"]
+testpaths = [ "testing" ]
 xfail_strict = true
 markers = [
 ]
 
 [tool.coverage.run]
 omit = [
-    "tests/*",
+  "tests/*",
 ]
 
 [tool.coverage.report]
 fail_under = 0
 show_missing = true
-
-[tool.ruff]
-line-length = 120
-extend-ignore = ["PD901"]
-select = [
-  # Bandit
-  "S",
-  # Bugbear
-  "B",
-  # Builtins
-  "A",
-  # comprehensions
-  "C4",
-  # eradicate
-  "ERA",
-  # flake8-2020
-  "YTT",
-  # isort
-  "I",
-  # pandas-vet
-  "PD",
-  # print
-  "T20",
-  # Pycodestyle
-  "E",
-  "W",
-  # Pyflakes
-  "F",
-  # return
-  "RET",
-]
-
-[tool.ruff.per-file-ignores]
-"tests/*" = ["S101"]  # Use of `assert` detected
-
 
 # ===================
 # Tasks configuration
@@ -173,7 +169,7 @@ format = [
   { cmd = "black sqlalchemy_postgresql_relaxed/ tests/" },
   { cmd = "isort sqlalchemy_postgresql_relaxed/ tests/" },
   # Configure Ruff not to auto-fix (remove!) unused variables (F841) and `print` statements (T201).
-  { cmd = "ruff --fix --ignore=ERA --ignore=F401 --ignore=F841 --ignore=T20 ." },
+  { cmd = "ruff check --fix --ignore=ERA --ignore=F401 --ignore=F841 --ignore=T20 ." },
   { cmd = "pyproject-fmt pyproject.toml" },
 ]
 
