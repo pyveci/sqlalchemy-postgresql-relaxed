@@ -43,7 +43,6 @@ classifiers = [
   "Programming Language :: Python :: 3.10",
   "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: 3.12",
-  "Programming Language :: Python :: 3.13",
   "Topic :: Communications",
   "Topic :: Database",
   "Topic :: Documentation",
@@ -79,7 +78,7 @@ optional-dependencies.release = [
 ]
 optional-dependencies.test = [
   "pandas<2.3",
-  "polars[pyarrow]<1.10; python_version<'3.13'",
+  "polars[pyarrow]<1.10",
   "pytest<9",
   "pytest-asyncio<1",
   "pytest-cov<6",

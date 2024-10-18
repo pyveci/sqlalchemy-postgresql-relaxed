@@ -1,9 +1,7 @@
-# ruff: noqa: E402
 import sys
 
+import polars as pl
 import pytest
-
-pl = pytest.importorskip("polars")
 import sqlalchemy as sa
 from polars.testing import assert_frame_equal
 
