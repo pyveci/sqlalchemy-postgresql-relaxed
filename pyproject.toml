@@ -67,7 +67,7 @@ optional-dependencies.develop = [
   "isort<6",
   "poethepoet<0.30",
   "proselint<0.15",
-  "pyproject-fmt<2.5",
+  "pyproject-fmt<2.6",
   "ruff<0.8",
   "validate-pyproject<0.23",
 ]
