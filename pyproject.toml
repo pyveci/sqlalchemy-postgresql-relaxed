@@ -81,7 +81,7 @@ optional-dependencies.test = [
   "polars[pyarrow]<1.13",
   "pytest<9",
   "pytest-asyncio<1",
-  "pytest-cov<6",
+  "pytest-cov<7",
   "sqlalchemy-cratedb",
 ]
 urls.changelog = "https://github.com/pyveci/sqlalchemy-postgresql-relaxed/blob/main/CHANGES.rst"
