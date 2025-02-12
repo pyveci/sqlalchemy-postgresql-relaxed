@@ -64,7 +64,7 @@ dependencies = [
 ]
 optional-dependencies.develop = [
   "black<25",
-  "isort<6",
+  "isort<7",
   "poethepoet<0.33",
   "proselint<0.15",
   "pyproject-fmt<2.6",
