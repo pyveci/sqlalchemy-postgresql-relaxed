@@ -64,7 +64,7 @@ dependencies = [
   "sqlalchemy<3,>=2",
 ]
 optional-dependencies.develop = [
-  "poethepoet<0.33",
+  "poethepoet<1",
   "proselint<0.15",
   "pyproject-fmt<2.6",
   "ruff<0.10",
