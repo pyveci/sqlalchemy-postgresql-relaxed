@@ -63,8 +63,6 @@ dependencies = [
   "sqlalchemy<3,>=2",
 ]
 optional-dependencies.develop = [
-  "black<25",
-  "isort<6",
   "poethepoet<0.33",
   "proselint<0.15",
   "pyproject-fmt<2.6",
@@ -94,9 +92,6 @@ entry-points."sqlalchemy.dialects"."postgresql.psycopg_relaxed_async" = "sqlalch
 
 [tool.setuptools.packages]
 find = {}
-
-[tool.black]
-line-length = 120
 
 [tool.ruff]
 line-length = 120
@@ -131,11 +126,6 @@ lint.select = [
 lint.extend-ignore = [ "PD901" ]
 lint.per-file-ignores."tests/*" = [ "S101" ] # Use of `assert` detected
 
-[tool.isort]
-profile = "black"
-line_length = 120
-multi_line_output = 3
-
 [tool.pytest.ini_options]
 minversion = "2.0"
 addopts = "-rsfEX -p pytester --strict-markers --verbosity=3 --cov --cov-report=term-missing --cov-report=xml"
@@ -166,8 +156,7 @@ check = [
 ]
 
 format = [
-  { cmd = "black sqlalchemy_postgresql_relaxed/ tests/" },
-  { cmd = "isort sqlalchemy_postgresql_relaxed/ tests/" },
+  { cmd = "ruff format ." },
   # Configure Ruff not to auto-fix (remove!) unused variables (F841) and `print` statements (T201).
   { cmd = "ruff check --fix --ignore=ERA --ignore=F401 --ignore=F841 --ignore=T20 ." },
   { cmd = "pyproject-fmt pyproject.toml" },
@@ -175,8 +164,7 @@ format = [
 
 lint = [
   { cmd = "ruff check sqlalchemy_postgresql_relaxed/ tests/" },
-  { cmd = "black --check sqlalchemy_postgresql_relaxed/ tests/" },
-  { cmd = "isort --check sqlalchemy_postgresql_relaxed/ tests/" },
+  { cmd = "ruff format --check sqlalchemy_postgresql_relaxed/ tests/" },
   { cmd = "validate-pyproject pyproject.toml" },
   { cmd = "proselint *.rst doc/*.rst" },
   # { cmd = "mypy" },
