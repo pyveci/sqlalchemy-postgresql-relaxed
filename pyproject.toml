@@ -167,7 +167,7 @@ lint = [
   { cmd = "ruff check sqlalchemy_postgresql_relaxed/ tests/" },
   { cmd = "ruff format --check sqlalchemy_postgresql_relaxed/ tests/" },
   { cmd = "validate-pyproject pyproject.toml" },
-  { cmd = "proselint *.rst doc/*.rst" },
+  { cmd = "proselint *.rst" },
   # { cmd = "mypy" },
 ]
 
