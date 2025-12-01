@@ -66,7 +66,7 @@ dependencies = [
 ]
 optional-dependencies.develop = [
   "poethepoet<1",
-  "proselint<1",
+  "proselint>=0.16,<1",
   "pyproject-fmt<3",
   "ruff<0.15",
   "validate-pyproject<1",
@@ -168,7 +168,7 @@ lint = [
   { cmd = "ruff check sqlalchemy_postgresql_relaxed/ tests/" },
   { cmd = "ruff format --check sqlalchemy_postgresql_relaxed/ tests/" },
   { cmd = "validate-pyproject pyproject.toml" },
-  { cmd = "proselint *.rst" },
+  { cmd = "proselint check *.rst" },
   # { cmd = "mypy" },
 ]
 
