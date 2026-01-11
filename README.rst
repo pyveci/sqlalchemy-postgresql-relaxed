@@ -117,6 +117,15 @@ License and warranty
 
 The project is licensed under the terms of the MIT license, see `LICENSE`_.
 
+Supported by
+============
+
+.. image:: https://resources.jetbrains.com/storage/products/company/brand/logos/jetbrains.svg
+    :target: https://jb.gg/OpenSourceSupport
+
+Special thanks to the people at JetBrains s.r.o. for supporting us with
+excellent development tooling.
+
 
 .. _Create an issue: https://github.com/pyveci/sqlalchemy-postgresql-relaxed/issues/new
 .. _development sandbox: https://github.com/pyveci/sqlalchemy-postgresql-relaxed/blob/main/DEVELOP.rst
