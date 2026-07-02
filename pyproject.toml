@@ -79,7 +79,7 @@ optional-dependencies.release = [
 optional-dependencies.test = [
   "pandas<2.4",
   "polars[pyarrow]<1.37",
-  "pytest<9",
+  "pytest<10",
   "pytest-asyncio<2",
   "pytest-cov<8",
   "sqlalchemy-cratedb",
