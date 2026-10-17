@@ -62,7 +62,7 @@ classifiers = [
 dependencies = [
   "asyncpg",
   "psycopg[binary]",
-  "sqlalchemy>=2,<3",
+  "sqlalchemy[asyncio]>=2,<3",
 ]
 optional-dependencies.develop = [
   "poethepoet<1",
