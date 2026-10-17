@@ -78,7 +78,7 @@ optional-dependencies.release = [
 ]
 optional-dependencies.test = [
   "pandas<2.4",
-  "polars[pyarrow]<2",
+  "polars[pyarrow]<3",
   "pytest<10",
   "pytest-asyncio<2",
   "pytest-cov<8",
